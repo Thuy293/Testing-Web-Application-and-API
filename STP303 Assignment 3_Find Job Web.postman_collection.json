@@ -1,0 +1,1459 @@
+{
+	"info": {
+		"_postman_id": "90084289-e81e-4ad8-8ad0-4fb4352a5762",
+		"name": "STP303 Assignment 3_Find Job Web",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27363482"
+	},
+	"item": [
+		{
+			"name": "1. Đăng ký ứng viên - Thành công -200 OK",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"    pm.test(\"Đăng kí thông tin và tài khoản thành công\", function() {\r",
+							"        pm.response.to.have.status(201);\r",
+							"        pm.response.to.have.status(\"Created\");\r",
+							"    });\r",
+							"\r",
+							"    pm.test(\"Đã xảy ra lỗi khi đăng ký\",function () {\r",
+							"    pm.response.to.have.status(500);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "thanh thuy",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "ade@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "account",
+							"value": "thanhthuy1a",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Thanhthuy1234",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "0981234563",
+							"type": "text"
+						},
+						{
+							"key": "sex",
+							"value": "Nam",
+							"type": "text"
+						},
+						{
+							"key": "birthday",
+							"value": "02/02/1994",
+							"type": "text"
+						},
+						{
+							"key": "experience",
+							"value": "teacher",
+							"type": "text"
+						},
+						{
+							"key": "skill",
+							"value": "english",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "more than text",
+							"type": "text"
+						},
+						{
+							"key": "foreiginLanguage",
+							"value": "english",
+							"type": "text"
+						},
+						{
+							"key": "education",
+							"value": "university",
+							"type": "text"
+						},
+						{
+							"key": "avatar",
+							"type": "file",
+							"src": "6oRu9KHv7/Untitled Diagram (2).jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{URL}}users/register",
+					"host": [
+						"{{URL}}users"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1. Đăng ký ứng viên - Email đã sử dụng - 500 Đã xảy ra lỗi",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"    pm.test(\"Đăng kí thông tin và tài khoản thành công\", function() {\r",
+							"        pm.response.to.have.status(201);\r",
+							"        pm.response.to.have.status(\"Created\");\r",
+							"    });\r",
+							"\r",
+							"    pm.test(\"Đã xảy ra lỗi khi đăng ký\",function () {\r",
+							"    pm.response.to.have.status(500);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "thanhthuy",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "abdf@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "account",
+							"value": "thanhthuy134ab",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Thanh1234",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "1343489013",
+							"type": "text"
+						},
+						{
+							"key": "sex",
+							"value": "Nam",
+							"type": "text"
+						},
+						{
+							"key": "birthday",
+							"value": "02/02/1994",
+							"type": "text"
+						},
+						{
+							"key": "experience",
+							"value": "teacher",
+							"type": "text"
+						},
+						{
+							"key": "skill",
+							"value": "english",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "more than text",
+							"type": "text"
+						},
+						{
+							"key": "foreiginLanguage",
+							"value": "english",
+							"type": "text"
+						},
+						{
+							"key": "education",
+							"value": "university",
+							"type": "text"
+						},
+						{
+							"key": "avatar",
+							"type": "file",
+							"src": "6oRu9KHv7/Untitled Diagram (2).jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{URL}}users/register",
+					"host": [
+						"{{URL}}users"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1. Đăng ký ứng viên - SDT đã sử dụng - 500 Đã xảy ra lỗi",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"    pm.test(\"Đăng kí thông tin và tài khoản thành công\", function() {\r",
+							"        pm.response.to.have.status(201);\r",
+							"        pm.response.to.have.status(\"Created\");\r",
+							"    });\r",
+							"\r",
+							"    pm.test(\"Đã xảy ra lỗi khi đăng ký\",function () {\r",
+							"    pm.response.to.have.status(500);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "thanhthuy",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "thanhabdf@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "account",
+							"value": "thanhthuy1345",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Thanh1234",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "0143489013",
+							"type": "text"
+						},
+						{
+							"key": "sex",
+							"value": "Nam",
+							"type": "text"
+						},
+						{
+							"key": "birthday",
+							"value": "02/02/1994",
+							"type": "text"
+						},
+						{
+							"key": "experience",
+							"value": "teacher",
+							"type": "text"
+						},
+						{
+							"key": "skill",
+							"value": "english",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "more than text",
+							"type": "text"
+						},
+						{
+							"key": "foreiginLanguage",
+							"value": "english",
+							"type": "text"
+						},
+						{
+							"key": "education",
+							"value": "university",
+							"type": "text"
+						},
+						{
+							"key": "avatar",
+							"type": "file",
+							"src": "6oRu9KHv7/Untitled Diagram (2).jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{URL}}users/register",
+					"host": [
+						"{{URL}}users"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1. Đăng ký ứng viên - Email và SDT không đúng định dạng - 500 Đã xảy ra lỗi",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"    pm.test(\"Đăng kí thông tin và tài khoản thành công\", function() {\r",
+							"        pm.response.to.have.status(201);\r",
+							"        pm.response.to.have.status(\"Created\");\r",
+							"    });\r",
+							"\r",
+							"    pm.test(\"Đã xảy ra lỗi khi đăng ký\",function () {\r",
+							"    pm.response.to.have.status(500);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "thanhthuy",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "abdfgmail.com",
+							"type": "text"
+						},
+						{
+							"key": "account",
+							"value": "thanhthuy134",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Thanh1234",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "01434890ab",
+							"type": "text"
+						},
+						{
+							"key": "sex",
+							"value": "Nam",
+							"type": "text"
+						},
+						{
+							"key": "birthday",
+							"value": "02/02/1994",
+							"type": "text"
+						},
+						{
+							"key": "experience",
+							"value": "teacher",
+							"type": "text"
+						},
+						{
+							"key": "skill",
+							"value": "english",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "more than text",
+							"type": "text"
+						},
+						{
+							"key": "foreiginLanguage",
+							"value": "english",
+							"type": "text"
+						},
+						{
+							"key": "education",
+							"value": "university",
+							"type": "text"
+						},
+						{
+							"key": "avatar",
+							"type": "file",
+							"src": "6oRu9KHv7/Untitled Diagram (2).jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{URL}}users/register",
+					"host": [
+						"{{URL}}users"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1. Đăng ký ứng viên - Mật khẩu sai định dạng - 500 Đã xảy ra lỗi",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"    pm.test(\"Đăng kí thông tin và tài khoản thành công\", function() {\r",
+							"        pm.response.to.have.status(201);\r",
+							"        pm.response.to.have.status(\"Created\");\r",
+							"    });\r",
+							"\r",
+							"    pm.test(\"Đã xảy ra lỗi khi đăng ký\",function () {\r",
+							"    pm.response.to.have.status(500);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "thanhthuy",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "tonabdf@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "account",
+							"value": "thanhthuy1346",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Thanh",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "0143489456",
+							"type": "text"
+						},
+						{
+							"key": "sex",
+							"value": "Nam",
+							"type": "text"
+						},
+						{
+							"key": "birthday",
+							"value": "02/02/1994",
+							"type": "text"
+						},
+						{
+							"key": "experience",
+							"value": "teacher",
+							"type": "text"
+						},
+						{
+							"key": "skill",
+							"value": "english",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "more than text",
+							"type": "text"
+						},
+						{
+							"key": "foreiginLanguage",
+							"value": "english",
+							"type": "text"
+						},
+						{
+							"key": "education",
+							"value": "university",
+							"type": "text"
+						},
+						{
+							"key": "avatar",
+							"type": "file",
+							"src": "6oRu9KHv7/Untitled Diagram (2).jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{URL}}users/register",
+					"host": [
+						"{{URL}}users"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1. Đăng ký ứng viên - Không nhập thông tin cơ bản - 500 Đã xảy ra lỗi",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"    pm.test(\"Đăng kí thông tin và tài khoản thành công\", function() {\r",
+							"        pm.response.to.have.status(201);\r",
+							"        pm.response.to.have.status(\"Created\");\r",
+							"    });\r",
+							"\r",
+							"    pm.test(\"Đã xảy ra lỗi khi đăng ký\",function () {\r",
+							"    pm.response.to.have.status(500);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "thanhthuy",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "abdf@gmail.com",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "account",
+							"value": "thanhthuy134",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "Thanh1234",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "phone",
+							"value": "0143489013",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "sex",
+							"value": "Nam",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "birthday",
+							"value": "02/02/1994",
+							"type": "text"
+						},
+						{
+							"key": "experience",
+							"value": "teacher",
+							"type": "text"
+						},
+						{
+							"key": "skill",
+							"value": "english",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "more than text",
+							"type": "text"
+						},
+						{
+							"key": "foreiginLanguage",
+							"value": "english",
+							"type": "text"
+						},
+						{
+							"key": "education",
+							"value": "university",
+							"type": "text"
+						},
+						{
+							"key": "avatar",
+							"type": "file",
+							"src": "6oRu9KHv7/Untitled Diagram (2).jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{URL}}users/register",
+					"host": [
+						"{{URL}}users"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1. Đăng ký ứng viên - Tài khoản đã tồn tại - 500 Đã xảy ra lỗi",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Đăng kí thông tin và tài khoản thành công\", function() {\r",
+							"        pm.response.to.have.status(201);\r",
+							"        pm.response.to.have.status(\"Created\");\r",
+							"    });\r",
+							"\r",
+							"    pm.test(\"Đã xảy ra lỗi khi đăng ký\",function () {\r",
+							"    pm.response.to.have.status(500);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-type",
+						"value": "multipart/form-data",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "thanhthuy",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "thuyabdf@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Thanh1234",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "2345489015",
+							"type": "text"
+						},
+						{
+							"key": "sex",
+							"value": "Nam",
+							"type": "text"
+						},
+						{
+							"key": "birthday",
+							"value": "02/02/1994",
+							"type": "text"
+						},
+						{
+							"key": "experience",
+							"value": "teacher",
+							"type": "text"
+						},
+						{
+							"key": "skill",
+							"value": "english",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "more than text",
+							"type": "text"
+						},
+						{
+							"key": "foreiginLanguage",
+							"value": "english",
+							"type": "text"
+						},
+						{
+							"key": "education",
+							"value": "university",
+							"type": "text"
+						},
+						{
+							"key": "avatar",
+							"type": "file",
+							"src": "DQ6rhpNIh/Untitled Diagram (1).jpg"
+						},
+						{
+							"key": "account",
+							"value": "thanhthuy",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{URL}}users/register",
+					"host": [
+						"{{URL}}users"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2. Đăng nhập-  Ứng viên - Thành công - 200 OK",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var reqBody= JSON.parse(pm.request.body.raw);",
+							"var result=pm.response.json();",
+							"",
+							"if(pm.response.code==200) {",
+							"    msg=\"Đăng nhập thành công\";",
+							"    pm.environment.set(\"token1\",result.token);",
+							"    pm.test(\"Đăng nhập thành công\",function() {",
+							"        pm.expect(result.message).to.eql(msg);",
+							"        pm.expect(reqBody.account).to.eql(result.user.account);",
+							"        pm.expect(pm.response.text()).to.include(\"id\");",
+							"    })",
+							"};",
+							"",
+							"pm.test(\"Tài khoản người dùng không tồn tại\",function(){",
+							"pm.response.to.have.status(404);",
+							"pm.expect(pm.response.text()).to.include(\"message\");",
+							"});",
+							"",
+							"pm.test(\"Mật khẩu không hợp lệ\",function(){",
+							"    pm.response.to.have.status(400);",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"account\":\"thanhthuy\",\r\n\"password\":\"Thanhthuy1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}users/login",
+					"host": [
+						"{{URL}}users"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2. Đăng nhập-  Ứng viên - Sai account - 404 Not Found",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var reqBody= JSON.parse(pm.request.body.raw);",
+							"var result=pm.response.json();",
+							"",
+							"if(pm.response.code==200) {",
+							"    msg=\"Đăng nhập thành công\";",
+							"    pm.environment.set(\"token1\",result.token);",
+							"    pm.test(\"Đăng nhập thành công\",function() {",
+							"        pm.expect(result.message).to.eql(msg);",
+							"        pm.expect(reqBody.account).to.eql(result.user.account);",
+							"        pm.expect(pm.response.text()).to.include(\"id\");",
+							"    })",
+							"};",
+							"",
+							"pm.test(\"Tài khoản người dùng không tồn tại\",function(){",
+							"pm.response.to.have.status(404);",
+							"pm.expect(pm.response.text()).to.include(\"message\");",
+							"});",
+							"",
+							"pm.test(\"Mật khẩu không hợp lệ\",function(){",
+							"    pm.response.to.have.status(400);",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"account\":\"anhthuy\",\r\n\"password\":\"Thanhthuy1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}users/login",
+					"host": [
+						"{{URL}}users"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2. Đăng nhập-  Ứng viên - Sai Password - 400 Bad Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var reqBody= JSON.parse(pm.request.body.raw);",
+							"var result=pm.response.json();",
+							"",
+							"if(pm.response.code==200) {",
+							"    msg=\"Đăng nhập thành công\";",
+							"    pm.environment.set(\"token1\",result.token);",
+							"    pm.test(\"Đăng nhập thành công\",function() {",
+							"        pm.expect(result.message).to.eql(msg);",
+							"        pm.expect(reqBody.account).to.eql(result.user.account);",
+							"        pm.expect(pm.response.text()).to.include(\"id\");",
+							"    })",
+							"};",
+							"",
+							"pm.test(\"Tài khoản người dùng không tồn tại\",function(){",
+							"pm.response.to.have.status(404);",
+							"pm.expect(pm.response.text()).to.include(\"message\");",
+							"});",
+							"",
+							"pm.test(\"Mật khẩu không hợp lệ\",function(){",
+							"    pm.response.to.have.status(400);",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"account\":\"thanhthuy\",\r\n\"password\":\"Thathuy1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}users/login",
+					"host": [
+						"{{URL}}users"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. Đăng nhập - Nhà tuyển dụng - Thành công - 200 OK",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}company/login-company",
+					"host": [
+						"{{URL}}company"
+					],
+					"path": [
+						"login-company"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. Đăng nhập - Nhà tuyển dụng - Sai account - 404 Not Found",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}company/login-company",
+					"host": [
+						"{{URL}}company"
+					],
+					"path": [
+						"login-company"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. Đăng nhập - Sai password - 400 Bad Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}company/login-company",
+					"host": [
+						"{{URL}}company"
+					],
+					"path": [
+						"login-company"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4. Lấy danh sách công việc - Thành công - 200 OK",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Lấy danh sách công việc thành công\", function() {",
+							"        pm.response.to.have.status(200);",
+							"        pm.response.to.have.status(\"OK\");",
+							"    });",
+							"",
+							"    pm.test(\"Đã xảy ra lỗi\",function () {",
+							"    pm.response.to.have.status(500);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}work/list-work",
+					"host": [
+						"{{URL}}work"
+					],
+					"path": [
+						"list-work"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5. Lấy thông tin User hiện tại - Thành công - 200 OK",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Lấy danh sách thành công\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Có lỗi trong quá trình lấy dữ liệu\", function(){\r",
+							"    pm.response.to.have.status(500);\r",
+							"});\r",
+							"pm.test(\"Chưa đăng nhập\", function(){\r",
+							"    pm.response.to.have.status(403);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}users/get-information-user",
+					"host": [
+						"{{URL}}users"
+					],
+					"path": [
+						"get-information-user"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5. Lấy thông tin User hiện tại - Không Token - 403",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Lấy danh sách thành công\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Có lỗi trong quá trình lấy dữ liệu\", function(){\r",
+							"    pm.response.to.have.status(500);\r",
+							"});\r",
+							"pm.test(\"Chưa đăng nhập\", function(){\r",
+							"    pm.response.to.have.status(403);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://13.228.39.1:5000/api/users/get-information-user",
+					"protocol": "http",
+					"host": [
+						"13",
+						"228",
+						"39",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"get-information-user"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6. Lấy danh sách ứng viên - Thành công - 200 OK",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Lấy danh sách thành công\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Có lỗi trong quá trình lấy dữ liệu\", function(){\r",
+							"    pm.response.to.have.status(500);\r",
+							"});\r",
+							"pm.test(\"Chưa đăng nhập\", function(){\r",
+							"    pm.response.to.have.status(403);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}work-user/get-all-admin",
+					"host": [
+						"{{URL}}work-user"
+					],
+					"path": [
+						"get-all-admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "7. Ứng tuyển - Thành công - 200 OK",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Ứng tuyển thành công\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Forbiden\", function () {\r",
+							"    pm.response.to.have.status(403);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"jobId\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}application/create-application",
+					"host": [
+						"{{URL}}application"
+					],
+					"path": [
+						"create-application"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "7. Ứng tuyển - Không Token - 403 Forbidden",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Ứng tuyển thành công\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Forbiden\", function () {\r",
+							"    pm.response.to.have.status(403);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"jobId\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}application/create-application",
+					"host": [
+						"{{URL}}application"
+					],
+					"path": [
+						"create-application"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "8. Lấy danh sách công ty - Thành công - 200 OK",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Lấy danh sách thành công\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Có lỗi trong quá trình lấy dữ liệu\", function () {\r",
+							"    pm.response.to.have.status(500);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}company/getAllCompany",
+					"host": [
+						"{{URL}}company"
+					],
+					"path": [
+						"getAllCompany"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "9. Lấy danh sách ứng viên ứng tuyển - Thành công - 200 OK",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Lấy danh sách thành công\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Có lỗi trong quá trình lấy dữ liệu\", function () {\r",
+							"    pm.response.to.have.status(500);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}application/getall-application",
+					"host": [
+						"{{URL}}application"
+					],
+					"path": [
+						"getall-application"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "10. Lấy danh sách các ứng viên - Thành công - 200 OK",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Lấy danh sách thành công\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Có lỗi trong quá trình lấy dữ liệu\", function () {\r",
+							"    pm.response.to.have.status(500);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}users/getAllUsers",
+					"host": [
+						"{{URL}}users"
+					],
+					"path": [
+						"getAllUsers"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
